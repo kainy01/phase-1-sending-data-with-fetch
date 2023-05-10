@@ -1,4 +1,11 @@
 // method: "POST" is missing from the object below
+const userForm = document.querySelector('#user-form');
+userForm.addEventListener('submit', event => {
+  event.preventDefault();
+  const nameInput = document.querySelector('#name-input');
+  const emailInput = document.querySelector('#email-input');
+  submitData(nameInput.value, emailInput.value);
+});
 
 function submitData(name, email) {
   const formData = { name: name, email: email };
@@ -19,4 +26,4 @@ function submitData(name, email) {
   });
 }
 
-submitData("zain", "hshs");
+
